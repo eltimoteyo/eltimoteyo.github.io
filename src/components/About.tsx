@@ -9,7 +9,7 @@ export function About() {
     <section id="sobre-mi" className="relative py-28">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeading index="01" kicker="sobre mí" title="Del soporte técnico a construir plataformas completas" />
-        <div className="grid items-start gap-10 lg:grid-cols-[1fr_1fr] lg:gap-14">
+        <div className="grid items-start gap-10 lg:grid-cols-[1fr_1fr] lg:gap-14 [&>*]:min-w-0">
           <div>
             {about.paragraphs.map((p, i) => (
               <Reveal key={i} delay={i * 0.08}>
@@ -93,7 +93,7 @@ function Terminal() {
                 {current && !showOut && <span className="animate-blink inline-block h-4 w-2 bg-cyan/80" />}
               </div>
               {out && (
-                <div className="mt-1 whitespace-pre text-muted">
+                <div className="mt-1 whitespace-pre-wrap break-words text-muted">
                   {entry.out.map((l) => (
                     <div key={l} className={l.includes("Running") ? "text-muted [&>span]:text-emerald" : ""}>
                       {l.includes("Running") ? (

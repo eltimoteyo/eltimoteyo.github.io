@@ -16,7 +16,7 @@ export function AIShowcase() {
           title="IA generativa aplicada a negocio, no solo a demos"
           subtitle="Integro modelos de lenguaje y visión en productos que la gente usa: con enrutamiento entre proveedores, agentes supervisados y control de costos."
         />
-        <div className="grid items-start gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-10">
+        <div className="grid items-start gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-10 [&>*]:min-w-0">
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
             {aiCapabilities.map((c, i) => (
               <Reveal key={c.title} delay={i * 0.07}>
@@ -229,9 +229,9 @@ function GatewaySimulator() {
                 initial={{ opacity: 0, x: -8 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0 }}
-                className="flex gap-3 whitespace-nowrap"
+                className="flex gap-3"
               >
-                <span className="text-faint">{l.time}</span>
+                <span className="shrink-0 text-faint">{l.time}</span>
                 <span className={l.tone === "bad" ? "text-rose" : l.tone === "good" ? "text-emerald" : "text-muted"}>{l.text}</span>
               </motion.div>
             ))}

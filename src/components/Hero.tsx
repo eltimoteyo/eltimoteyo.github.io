@@ -22,7 +22,7 @@ export function Hero({ ready }: { ready: boolean }) {
   }, []);
 
   return (
-    <section id="inicio" className="relative flex min-h-[100svh] items-center pt-28 pb-20">
+    <section id="inicio" className="relative flex min-h-[100svh] items-center overflow-x-clip pt-28 pb-20">
       <div className="mx-auto grid w-full max-w-7xl items-center gap-16 px-5 sm:px-8 lg:grid-cols-[1.12fr_0.88fr]">
         <motion.div variants={container} initial="hidden" animate={ready ? "show" : "hidden"}>
           <motion.div variants={item}>
@@ -43,7 +43,7 @@ export function Hero({ ready }: { ready: boolean }) {
             <span className="text-gradient-anim block pb-2">{profile.lastName}</span>
           </motion.h1>
 
-          <motion.div variants={item} className="mt-5 flex items-center gap-3 font-display text-xl sm:text-2xl">
+          <motion.div variants={item} className="mt-5 flex items-center gap-3 font-display text-[clamp(1.05rem,4.8vw,1.5rem)]">
             <span className="text-muted">Soy</span>
             <span className="relative inline-flex h-[1.35em] items-center overflow-hidden">
               <AnimatePresence mode="wait" initial={false}>
@@ -277,7 +277,7 @@ function Avatar() {
         <motion.div
           animate={{ y: [0, -8, 0] }}
           transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut", delay: 1.2 }}
-          className="glass absolute bottom-[0%] left-[8%] flex items-center gap-2 rounded-full bg-ink-900/95 px-3.5 py-2 font-mono text-[11px] text-muted"
+          className="glass absolute bottom-[0%] left-[8%] hidden items-center gap-2 rounded-full sm:flex bg-ink-900/95 px-3.5 py-2 font-mono text-[11px] text-muted"
           style={{ translateZ: 40 }}
         >
           <span className="h-1.5 w-1.5 rounded-full bg-emerald shadow-[0_0_10px_2px] shadow-emerald/60" />
