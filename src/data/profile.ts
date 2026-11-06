@@ -6,7 +6,7 @@ export const profile = {
   lastName: "Rodríguez Cortez",
   initials: "TR",
   // Coloca tu foto en /public (por ejemplo public/foto.jpg) y escribe aquí "foto.jpg".
-  photo: "",
+  photo: "foto.jpg",
   roles: [
     "Analista de Sistemas",
     "Desarrollador Full Stack",
